@@ -150,10 +150,12 @@ de l'image ainsi que le message "Génération PDF terminée"*/
 public void generationPDF(){
    PGraphics pdf = createGraphics(imageRef.width, imageRef.height, PDF, cheminFichier+".pdf");
   pdf.beginDraw();
-  for (int i = 1; i < pagesValue; i++) {
+  for (int i = 0; i < pagesValue; i++) {
     pdf.background(255);
     pdf.image(imageRef.get(0, i, imageRef.width, 1), 0, 0, imageRef.width, imageRef.height);
+     if (i < pagesValue - 1) {        // Evite d'afficher une page blanche à la fin du fichier
       ((PGraphicsPDF) pdf).nextPage();
+  }
   }
   pdf.dispose();
   pdf.endDraw();
@@ -161,23 +163,5 @@ public void generationPDF(){
   println(imageRef.width, "x", imageRef.height);
 }
 
-
-      
-  
-  
-  
-     
-  
- 
-
-
-/*Méthode qui ouvre une boîte de dialogue lors de l'appui sur le 3e bouton "générer un pdf"
-elle permet de choisir un emplacement particulier d'enregistrement du fichier.
-,
-
-*/
-
-
-  
 
 
