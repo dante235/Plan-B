@@ -1,4 +1,4 @@
-![screenshot](https://github.com/dante235/Plan-B/blob/master/Example/In%20real%20life/Test-2.jpg)
+![screenshot](Plan-B/Example and tests pictures/In real life/Test-2.jpg)
 Plan-B
 ======
 
